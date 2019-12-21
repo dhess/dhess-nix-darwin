@@ -1,0 +1,50 @@
+{
+    "dhess-nix": {
+        "branch": "master",
+        "description": "My personal Nixpkgs packages and overrides.",
+        "homepage": null,
+        "owner": "dhess",
+        "repo": "dhess-nix",
+        "rev": "2312b9d5852dd91fb8b9fd213268181227b08f75",
+        "sha256": "0y4443kgl7s40ykrbs5hdkscfpqjxmaq54hw6k1zwifd6b8nzr7r",
+        "type": "tarball",
+        "url": "https://github.com/dhess/dhess-nix/archive/2312b9d5852dd91fb8b9fd213268181227b08f75.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "niv": {
+        "branch": "master",
+        "description": "Easy dependency management for Nix projects",
+        "homepage": "https://github.com/nmattia/niv",
+        "owner": "nmattia",
+        "repo": "niv",
+        "rev": "abd0de3269fd712955d27b70e32921841c7b8bb7",
+        "sha256": "0b38n1ad00s1qqyw3ml3pypf8i1pw4aqw0bpa02qq9iv7sp3x0gz",
+        "type": "tarball",
+        "url": "https://github.com/nmattia/niv/archive/abd0de3269fd712955d27b70e32921841c7b8bb7.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "nix-darwin": {
+        "branch": "master",
+        "description": "nix modules for darwin",
+        "homepage": "",
+        "owner": "LnL7",
+        "repo": "nix-darwin",
+        "rev": "3ec36dd6673198a8a6fcd433866654e4155c7eb6",
+        "sha256": "0rb3ssnw66qj2lh8djnpb9crw7s3a7410a0m62p83xp979n4l2ls",
+        "type": "tarball",
+        "url": "https://github.com/LnL7/nix-darwin/archive/3ec36dd6673198a8a6fcd433866654e4155c7eb6.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "nixpkgs": {
+        "branch": "nixos-19.03",
+        "description": "A read-only mirror of NixOS/nixpkgs tracking the released channels. Send issues and PRs to",
+        "homepage": "https://github.com/NixOS/nixpkgs",
+        "owner": "NixOS",
+        "repo": "nixpkgs-channels",
+        "rev": "d1dff0bcd9f8cd5cf8fca1ab8f08d55dff5c9c57",
+        "sha256": "1niknqpb6yrlcvv28cylklf7kgkjslx87jqjcnbsnr89bsq618gn",
+        "type": "tarball",
+        "url": "https://github.com/NixOS/nixpkgs-channels/archive/d1dff0bcd9f8cd5cf8fca1ab8f08d55dff5c9c57.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    }
+}
