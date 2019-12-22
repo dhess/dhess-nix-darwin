@@ -9,18 +9,21 @@ in
 
 let
 
-  dhessNixDarwinOverlays = self: super:
+  overlays = self: super:
     lib.customisation.composeOverlays lib.overlays super;
-  dhessNixDarwinPkgs = lib.customisation.composeOverlays (lib.singleton dhessNixDarwinOverlays) pkgs;
+  self = lib.customisation.composeOverlays (lib.singleton overlays) pkgs;
 
 in
 {
   # Example nix-darwin configs.
-  inherit (dhessNixDarwinPkgs) build-host remote-builder;
+  inherit (self) build-host remote-builder;
 
   # nix-drawin helper script.
-  inherit (dhessNixDarwinPkgs) macnix-rebuild;
+  inherit (self) macnix-rebuild;
+
+  # Library functions.
+  inherit (self) lib;
 
   # Overlays for the dhess-nix-darwin package.
-  overlays.dhess-nix-darwin = dhessNixDarwinOverlays;
+  overlays.dhess-nix-darwin = overlays;
 }
