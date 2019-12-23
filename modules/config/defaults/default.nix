@@ -104,9 +104,9 @@ in
 
     system.activationScripts.postActivation.text = ''
       printf "Disabling Spotlight on /nix... "
-      mdutil -i off /nix
-      mdutil -d /nix
-      mdutil -E /nix
+      mdutil -i off /nix &> /dev/null
+      mdutil -d /nix &> /dev/null
+      mdutil -E /nix &> /dev/null
       touch /nix/.metadata_never_index
       echo "ok"
     '';
