@@ -36,7 +36,7 @@ let
   # These run less frequently, so that they don't interfere with
   # checkins on the master branch.
   mkAlternate = dhessNixDarwinBranch: dhessNixRev: nixDarwinRev: {
-    checkinterval = 60 * 60 * 3;
+    checkinterval = 60 * 5;
     inputs = {
       dhessNixDarwin = mkFetchGithub "${dhessNixDarwinUri} ${dhessNixDarwinBranch}";
       dhess_nix = mkFetchGithub "https://github.com/dhess/dhess-nix.git ${dhessNixRev}";
