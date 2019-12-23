@@ -25,10 +25,10 @@ let
 
   overlays = (lib.singleton dhess-nix.overlays.all)
   ++ (map import [
+    ../overlays/lib/fetchers.nix
+    ../overlays/lib/dhess-nix-darwin.nix
     ../overlays/custom-packages.nix
     ../overlays/examples.nix
-    ../overlays/lib/dhess-nix-darwin.nix
-    ../overlays/lib/fetchers.nix
   ]);
 
 in lib //
