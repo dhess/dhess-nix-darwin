@@ -35,17 +35,18 @@ let
 
   # These run less frequently, so that they don't interfere with
   # checkins on the master branch.
-  mkAlternate = dhessNixDarwinBranch: nixpkgsRev: {
+  mkAlternate = dhessNixDarwinBranch: dhessNixRev: nixDarwinRev: {
     checkinterval = 60 * 60 * 3;
     inputs = {
       dhessNixDarwin = mkFetchGithub "${dhessNixDarwinUri} ${dhessNixDarwinBranch}";
-      nixpkgs_override = mkFetchGithub "https://github.com/NixOS/nixpkgs-channels.git ${nixpkgsRev}";
+      dhess_nix = mkFetchGithub "https://github.com/dhess/dhess-nix.git ${dhessNixRev}";
+      nix_darwin = mkFetchGithub "https://github.com/LnL7/nix-darwin.git ${nixDarwinRev}";
     };
   };
 
   mainJobsets = with pkgs.lib; mapAttrs (name: settings: defaultSettings // settings) (rec {
     master = {};
-    nixpkgs-unstable = mkAlternate "master" "nixpkgs-unstable";
+    next = mkAlternate "master" "master" "master";
   });
 
   jobsetsAttrs = mainJobsets;
