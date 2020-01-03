@@ -5,10 +5,10 @@
         "homepage": null,
         "owner": "dhess",
         "repo": "dhess-nix",
-        "rev": "1059321ae8ab221448ecf3ebd6385102e757252a",
-        "sha256": "0arbn92x58sh7ia539qs6hlb3yg5v3rxhpb7d4b7pzf9snwyzsdn",
+        "rev": "b4bfa0a565c9bc09d26563f94bf335026b773bcc",
+        "sha256": "1v6ljjf6fndrlmgf46syn6b0wkb3wmdsrs8g6piw47g8nn50dprk",
         "type": "tarball",
-        "url": "https://github.com/dhess/dhess-nix/archive/1059321ae8ab221448ecf3ebd6385102e757252a.tar.gz",
+        "url": "https://github.com/dhess/dhess-nix/archive/b4bfa0a565c9bc09d26563f94bf335026b773bcc.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "niv": {
