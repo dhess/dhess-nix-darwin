@@ -5,10 +5,10 @@
         "homepage": null,
         "owner": "dhess",
         "repo": "dhess-nix",
-        "rev": "3de35a0f4515cb9c4eafddc393819d97ac4f7cd9",
-        "sha256": "0815yn9j9jrcw9hpwqs4yplcp6xbhdk4k263xfhbm3dk46ab7n9f",
+        "rev": "8eca4d25eac35fa8ca11a9c22d3439e4ca077af1",
+        "sha256": "00dcrnawi4rlb3sik5d6p1pqakxh7zqr9027igz06wvh3di1n2sz",
         "type": "tarball",
-        "url": "https://github.com/dhess/dhess-nix/archive/3de35a0f4515cb9c4eafddc393819d97ac4f7cd9.tar.gz",
+        "url": "https://github.com/dhess/dhess-nix/archive/8eca4d25eac35fa8ca11a9c22d3439e4ca077af1.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "niv": {
@@ -29,10 +29,10 @@
         "homepage": "",
         "owner": "LnL7",
         "repo": "nix-darwin",
-        "rev": "590e9c872a850e970f9b5ba1d2428ec030fb7455",
-        "sha256": "1a38s7131bdnsq680qq46bhjigachi6x2bgfncjywbw0f2a2s4wd",
+        "rev": "3d50598ae007b175924344992cfcd41366e1bf57",
+        "sha256": "1jhdfn5w19syz9cc6f8pv1w12xyc1sk074cga23w2h1bh1yaadrm",
         "type": "tarball",
-        "url": "https://github.com/LnL7/nix-darwin/archive/590e9c872a850e970f9b5ba1d2428ec030fb7455.tar.gz",
+        "url": "https://github.com/LnL7/nix-darwin/archive/3d50598ae007b175924344992cfcd41366e1bf57.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nixpkgs": {
