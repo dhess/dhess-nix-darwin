@@ -31,6 +31,17 @@ in
 
     nix.trustedUsers = [ "@admin" ];
 
+    # See https://gist.github.com/LnL7/1cfca66d17eba1f9936175926bf39de8.
+    nix.useSandbox = true;
+    nix.sandboxPaths = [
+      "/System/Library/Frameworks"
+      "/System/Library/PrivateFrameworks"
+      "/usr/lib"
+      "/private/tmp"
+      "/private/var/tmp"
+      "/usr/bin/env"
+    ];
+
     nix.extraOptions = ''
       pre-build-hook =
     '';
