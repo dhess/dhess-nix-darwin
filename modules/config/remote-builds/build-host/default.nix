@@ -29,6 +29,18 @@ let
     }
   ) remoteBuildHosts;
 
+  mkHostPortPairs = remoteBuildHosts: lib.mapAttrsToList (_: descriptor: with descriptor;
+    { inherit hostName port; }
+  ) remoteBuildHosts;
+
+  sshExtraConfig = remoteBuildHosts: lib.concatMapStrings (pair:
+    lib.optionalString (pair.port != null) ''
+
+      Host ${pair.hostName}
+      Port ${toString pair.port}
+    ''
+  ) (mkHostPortPairs remoteBuildHosts);
+
 in
 {
   options.dhess-nix-darwin.build-host = {
@@ -90,5 +102,6 @@ in
     nix.distributedBuilds = true;
     nix.buildMachines = mkBuildMachines cfg.buildMachines;
     programs.ssh.knownHosts = knownHosts cfg.buildMachines;
+    programs.ssh.extraConfig = sshExtraConfig cfg.buildMachines;
   };
 }
