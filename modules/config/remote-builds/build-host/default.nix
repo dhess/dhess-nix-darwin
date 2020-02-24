@@ -41,6 +41,8 @@ let
     ''
   ) (mkHostPortPairs remoteBuildHosts);
 
+  sshConfig = pkgs.writeFile "ssh_config" sshExtraConfig;
+
 in
 {
   options.dhess-nix-darwin.build-host = {
@@ -102,6 +104,13 @@ in
     nix.distributedBuilds = true;
     nix.buildMachines = mkBuildMachines cfg.buildMachines;
     programs.ssh.knownHosts = knownHosts cfg.buildMachines;
-    programs.ssh.extraConfig = sshExtraConfig cfg.buildMachines;
+
+    system.activationScripts.postActivation.text = ''
+      mkdir -p ~root/.ssh
+      chmod 0700 ~root/.ssh
+      cp -f ${sshConfig} ~root/.ssh/config
+      chown -R root:root ~root/.ssh/config
+      chmod 0400 ~root/.ssh/config
+    '';
   };
 }
