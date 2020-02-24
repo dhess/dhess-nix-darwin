@@ -41,7 +41,7 @@ let
     ''
   ) (mkHostPortPairs remoteBuildHosts);
 
-  sshConfig = pkgs.writeFile "ssh_config" sshExtraConfig;
+  sshConfig = pkgs.writeText "ssh_config" sshExtraConfig;
 
 in
 {
