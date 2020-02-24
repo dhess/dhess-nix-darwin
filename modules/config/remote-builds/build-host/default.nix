@@ -109,7 +109,7 @@ in
       mkdir -p ~root/.ssh
       chmod 0700 ~root/.ssh
       cp -f ${sshConfig} ~root/.ssh/config
-      chown -R root:root ~root/.ssh/config
+      chown -R root:wheel ~root/.ssh/config
       chmod 0400 ~root/.ssh/config
     '';
   };
